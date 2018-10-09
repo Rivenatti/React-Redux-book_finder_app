@@ -1,27 +1,42 @@
 import React from "react";
+import "./BookSearch.css";
 
 export const BookSearch = props => {
   console.log(props.books);
   return (
-    <div>
-      <h1>Book: </h1>
+    <div className="wrapper">
+      <h1 className="page--title">Book: </h1>
       <form onSubmit={event => props.onSubmit(event, props.searchInputValue)}>
         <input
           value={props.searchInputValue}
           onChange={props.handleInputChange}
+          className="searching__input"
         />
-        <button>Search</button>
+        <button className="searching__button">Search</button>
       </form>
 
-      <ul>
+      <div className="books">
         {props.books.length > 1 ? (
-          props.books.map(book => {
-            return <li>{book.title}</li>;
+          props.books.map((book, index) => {
+            return (
+              <div key={index} className="book__card">
+                <h1 className="book--title">{book.title}</h1>
+                <img
+                  src={book.thumbnail}
+                  alt="image"
+                  className="book__thumbnail"
+                />
+                <p className="book--short-description">
+                  {book.description} ...
+                </p>
+                <button className="button">More</button>
+              </div>
+            );
           })
         ) : (
-          <span>start searching</span>
+          <span className="errorMessage">{props.message}</span>
         )}
-      </ul>
+      </div>
     </div>
   );
 };

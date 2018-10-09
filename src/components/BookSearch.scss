@@ -1,0 +1,162 @@
+// Variables:
+$book__card--title-color: #a6683b;
+$book__card--text-color: #a6923b;
+$book__card--background-color: rgba(white, 0.2);
+$book__card--button-background-color: rgb(0, 90, 173);
+
+.wrapper {
+  .page--title {
+    font-size: 3.8rem;
+    color: $book__card--title-color;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .searching__input {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    outline: none;
+    overflow: hidden;
+    border: none;
+    font-size: 1.7rem;
+  }
+
+  .searching__button {
+    color: #fff;
+    display: block;
+    margin: 1rem auto;
+    width: 50%;
+    padding: 1rem 0;
+    border-radius: 2.5rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    background-color: $book__card--button-background-color;
+  }
+
+  .books {
+    .book__card {
+      background-color: $book__card--background-color;
+      margin: 1rem 0;
+      padding: 1rem;
+
+      .book--title {
+        font-size: 3rem;
+        color: $book__card--title-color;
+      }
+
+      .book__thumbnail {
+        margin: 1rem;
+      }
+
+      .book--short-description {
+        font-size: 1.8em;
+        text-align: left;
+        color: $book__card--text-color;
+        min-height: 15rem;
+      }
+
+      .button {
+        margin-top: 1.5rem;
+        padding: 1rem 3rem;
+        background-color: $book__card--button-background-color;
+        border-radius: 1rem;
+        border: 0;
+        color: white;
+        font-size: 1.7rem;
+        cursor: pointer;
+        width: 50%;
+
+        &:hover {
+          background-color: darken($book__card--button-background-color, 2%);
+        }
+      }
+    }
+
+    .errorMessage {
+      color: red;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .wrapper {
+    .books {
+      .book__card {
+        width: 90%;
+        margin: 1.5rem auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    .searching__input {
+      width: 50%;
+    }
+
+    .searching__button {
+      width: 25%;
+    }
+    .books {
+      .book__card {
+        width: 70%;
+        margin: 1.5rem auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    .searching__input {
+      width: 30%;
+    }
+
+    .searching__button {
+      width: 15%;
+    }
+    .books {
+      display: flex;
+      flex-wrap: wrap;
+
+      .book__card {
+        width: 32%;
+        margin: 1.5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .wrapper {
+    .searching__input {
+      width: 25%;
+    }
+
+    .searching__button {
+      width: 10%;
+    }
+    .books {
+      .book__card {
+        width: 23%;
+        margin: 1.5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -9,7 +9,8 @@ const getBooks = async (dispatch, query) => {
       data.totalItems === 0
         ? dispatch({
             type: SET_BOOKS,
-            books: {}
+            books: [],
+            message: "Not found ."
           })
         : data.items.map(book => {
             return dispatch({
@@ -20,9 +21,13 @@ const getBooks = async (dispatch, query) => {
                 author: book.volumeInfo.authors.toString(),
                 pages: book.volumeInfo.pageCount,
                 published: book.volumeInfo.publishedDate,
-                description: book.volumeInfo.description.slice(0, 100),
+                description: book.volumeInfo.description
+                  .split(" ")
+                  .slice(0, 25)
+                  .join(" "),
                 lang: book.volumeInfo.language
-              }
+              },
+              message: ""
             });
           });
     });

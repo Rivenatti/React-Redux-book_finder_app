@@ -1,0 +1,154 @@
+.wrapper .page--title {
+  font-size: 3.8rem;
+  color: #a6683b;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.wrapper .searching__input {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  outline: none;
+  overflow: hidden;
+  border: none;
+  font-size: 1.7rem;
+}
+
+.wrapper .searching__button {
+  color: #fff;
+  display: block;
+  margin: 1rem auto;
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 2.5rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  background-color: #005aad;
+}
+
+.wrapper .books .book__card {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.wrapper .books .book__card .book--title {
+  font-size: 3rem;
+  color: #a6683b;
+}
+
+.wrapper .books .book__card .book__thumbnail {
+  margin: 1rem;
+}
+
+.wrapper .books .book__card .book--short-description {
+  font-size: 1.8em;
+  text-align: left;
+  color: #a6923b;
+  min-height: 15rem;
+}
+
+.wrapper .books .book__card .button {
+  margin-top: 1.5rem;
+  padding: 1rem 3rem;
+  background-color: #005aad;
+  border-radius: 1rem;
+  border: 0;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  width: 50%;
+}
+
+.wrapper .books .book__card .button:hover {
+  background-color: #0055a3;
+}
+
+.wrapper .books .errorMessage {
+  color: red;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .wrapper .books .book__card {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .searching__input {
+    width: 50%;
+  }
+  .wrapper .searching__button {
+    width: 25%;
+  }
+  .wrapper .books .book__card {
+    width: 70%;
+    margin: 1.5rem auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper .searching__input {
+    width: 30%;
+  }
+  .wrapper .searching__button {
+    width: 15%;
+  }
+  .wrapper .books {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrapper .books .book__card {
+    width: 32%;
+    margin: 1.5rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .wrapper .searching__input {
+    width: 25%;
+  }
+  .wrapper .searching__button {
+    width: 10%;
+  }
+  .wrapper .books .book__card {
+    width: 23%;
+    margin: 1.5rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=BookSearch.css.map */

@@ -6,7 +6,8 @@ import Api from "../API/API";
 const mapStateToProps = state => {
   return {
     searchInputValue: state.searchInputValue,
-    books: state.books
+    books: state.books,
+    message: state.message
   };
 };
 

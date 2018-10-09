@@ -6,7 +6,8 @@ import {
 
 const INITIAL_STATE = {
   searchInputValue: "",
-  books: []
+  books: [],
+  message: ""
 };
 
 const rootReducer = (state = INITIAL_STATE, action) => {
@@ -22,7 +23,8 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case SET_BOOKS: {
       return {
         ...state,
-        books: [...state.books, action.books]
+        books: [...state.books, action.books],
+        message: action.message
       };
     }
     default:
