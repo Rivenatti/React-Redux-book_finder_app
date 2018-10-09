@@ -11,6 +11,7 @@ export const BookSearch = props => {
           value={props.searchInputValue}
           onChange={props.handleInputChange}
           className="searching__input"
+          placeholder="Title of the book..."
         />
         <button className="searching__button">Search</button>
       </form>
@@ -23,7 +24,7 @@ export const BookSearch = props => {
                 <h1 className="book--title">{book.title}</h1>
                 <img
                   src={book.thumbnail}
-                  alt="image"
+                  alt="book-thumbnail"
                   className="book__thumbnail"
                 />
                 <p className="book--short-description">
