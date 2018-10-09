@@ -1,7 +1,7 @@
 import { SET_BOOKS } from "../actions/actions";
 
-const getBooks = (dispatch, query) => {
-  fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
+const getBooks = async (dispatch, query) => {
+  await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
     .then(response => {
       return response.json();
     })

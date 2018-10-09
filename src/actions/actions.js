@@ -1,2 +1,3 @@
 export const SEARCH_INPUT_CHANGE = "SEARCH_INPUT_CHANGE";
 export const SET_BOOKS = "SET_BOOKS";
+export const RESET_STATE = "RESET_STATE";
