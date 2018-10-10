@@ -16,6 +16,7 @@ const getBooks = async (dispatch, query) => {
             return dispatch({
               type: SET_BOOKS,
               books: {
+                id: book.id,
                 title: book.volumeInfo.title,
                 thumbnail:
                   book.volumeInfo.imageLinks === undefined
@@ -29,7 +30,7 @@ const getBooks = async (dispatch, query) => {
                 published: book.volumeInfo.publishedDate,
                 description:
                   book.volumeInfo.description === undefined
-                    ? "Not found any data about description."
+                    ? "Not found any data about the description."
                     : book.volumeInfo.description
                         .split(" ")
                         .slice(0, 25)

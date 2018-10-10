@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { BookSearch } from "../components/BookSearch";
+import { BookSearch } from "../components/BookSearch/BookSearch";
 import { SEARCH_INPUT_CHANGE, RESET_STATE } from "../actions/actions.js";
 import Api from "../API/API";
 

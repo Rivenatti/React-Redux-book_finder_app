@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./reducers/rootReducer";
+import RouterComponent from "./components/Router/Router";
 
 const store = createStore(
   rootReducer,
@@ -13,7 +13,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <RouterComponent />
   </Provider>,
   document.getElementById("root")
 );

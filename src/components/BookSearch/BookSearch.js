@@ -1,8 +1,8 @@
 import React from "react";
 import "./BookSearch.css";
+import { Link } from "react-router-dom";
 
 export const BookSearch = props => {
-  console.log(props.books);
   return (
     <div className="wrapper">
       <h1 className="page--title">Book: </h1>
@@ -18,9 +18,9 @@ export const BookSearch = props => {
 
       <div className="books">
         {props.books.length > 1 ? (
-          props.books.map((book, index) => {
+          props.books.map(book => {
             return (
-              <div key={index} className="book__card">
+              <div key={book.id} className="book__card">
                 <h1 className="book--title">{book.title}</h1>
                 <img
                   src={book.thumbnail}
@@ -30,7 +30,14 @@ export const BookSearch = props => {
                 <p className="book--short-description">
                   {book.description} ...
                 </p>
-                <button className="button">More</button>
+                <Link
+                  to={{
+                    pathname: `/book/${book.id}`,
+                    data: { book }
+                  }}
+                >
+                  <button className="button">More...</button>
+                </Link>
               </div>
             );
           })
