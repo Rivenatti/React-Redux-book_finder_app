@@ -10,3 +10,6 @@ Web application was created using React and Redux. App is getting data from book
 
 * Start the development server with
 > npm start
+
+#
+The replication, conversion, duplication or divulgement of the whole application in order to benefit from it in any way is prohibited without the author's permission.
