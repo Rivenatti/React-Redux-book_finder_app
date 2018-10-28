@@ -14,9 +14,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     handleInputChange: event => {
+      // onChange METHOD FROM BookSearch
       dispatch({ type: SEARCH_INPUT_CHANGE, value: event.target.value });
     },
     onSubmit: (event, query) => {
+      // onSubmit METHOD FROM BookSearch
       event.preventDefault();
       dispatch({ type: RESET_STATE });
       Api.getBooks(dispatch, query);
